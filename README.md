@@ -1,27 +1,81 @@
-## The Golden Rule:
+!['wireframe for bulletin board app'](/assets/wireframe.jpeg)
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+# Home Page
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+## HTML Setup
 
-## Making a plan
+-   h1 for title
+-   button for login/logout
+-   button for create
+-   div to inject data fetched from supabase
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+## State
 
-Additional considerations:
+-   let postsData = []
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+## Events
+
+-   on page load
+    -   is user logged in?
+        -   yes, button text content should say log out
+        -   no, button text content should say log in
+    -   fetch render and append posts data to DOM
+-   user clicks login/logout button
+    -   if logged in, button should say log out and clicking it should log user out - button will change back to login
+    -   if not logged in, button should redirect user to auth page where they can log in or register for an account
+-   user clicks create button
+    -   if logged in, the user will be redirected to create page
+    -   if not logged in, button should redirect user to auth page where they can log in or register for an account
+
+# Auth Page
+
+## HTML Setup
+
+    - Form for sign up
+        - input for email
+        - input for password
+        - button for submit
+    - Form for sign in
+        - input for email
+        - input for password
+        - button for submit
+
+## State
+
+none
+
+## Events
+
+-   on page load
+    -   is user logged in?
+        -   yes, redirect to home page
+        -   no, no redirect
+-   user clicks sign in submit button
+    -   call sign in function
+    -   redirect to homepage if all checks out
+-   user clicks sign up submit button
+    -   call sign up function
+    -   redirect to homepage if all checks out - they should be automatically signed in
+
+# Create Page
+
+## HTML Setup
+
+-   Form for creating a post
+    -   Topic
+    -   Message
+    -   Contact
+    -   button to submit post
+
+## State
+
+none
+
+## Events
+
+-   on page load
+    -   is user logged in?
+        -   yes, no redirect
+        -   no, redirect to auth page
+-   user clicks submit button
+    -   will call function to add data to supabase table
