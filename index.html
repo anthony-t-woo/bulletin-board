@@ -11,7 +11,10 @@
         <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
         <!-- js -->
-        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
         <script type="module" src="app.js"></script>
 
         <!-- fonts -->
@@ -26,7 +29,9 @@
     <body>
         <header>
             <img class="logo" src="assets/html_css_js.png" alt="logo" />
-            <h1>Web App</h1>
+            <h1>Bulletin Board App</h1>
+            <button id="auth-button">auth</button>
+            <button id="create-button">create</button>
         </header>
 
         <main>
