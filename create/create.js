@@ -1,4 +1,4 @@
-import { checkAuthFromCreate } from '../auth-utils.js';
+import { checkAuthFromCreate, getUser } from '../auth-utils.js';
 import { addPost } from '../fetch-utils.js';
 import { renderColorOption, renderPost } from '../render-utils.js';
 
@@ -6,6 +6,7 @@ const createPostForm = document.getElementById('create-post');
 const homeButton = document.getElementById('home');
 const previewContainerEl = document.getElementById('preview-container');
 const backgroundSelectEl = document.getElementById('background-select');
+const loggedInMessageEl = document.querySelector('#logged-in-as');
 
 const colors = [
     'yellow',
@@ -21,6 +22,10 @@ const colors = [
 ];
 
 window.addEventListener('load', async () => {
+    if (getUser()) {
+        loggedInMessageEl.textContent = `Logged in as ${getUser().email}`;
+    }
+
     await checkAuthFromCreate();
 
     for (let color of colors) {

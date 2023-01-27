@@ -7,6 +7,7 @@ import { renderPost } from './render-utils.js';
 const postsContainerEl = document.querySelector('.posts-container');
 const authButton = document.querySelector('#auth-button');
 const createPostEl = document.querySelector('#create-post-card-prompt');
+const loggedInMessageEl = document.querySelector('#logged-in-as');
 
 /* State */
 let postData = [];
@@ -15,6 +16,8 @@ window.addEventListener('load', async () => {
     if (getUser()) {
         authButton.textContent = 'log out';
         createPostEl.textContent = 'Create New Post';
+        console.log(getUser());
+        loggedInMessageEl.textContent = `Logged in as ${getUser().email}`;
     }
     const response = await getPosts();
     postData = response;
