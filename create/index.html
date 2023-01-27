@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="../assets/alchemy-favicon.png" />
+
+        <!-- js -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="create.js"></script>
+
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
+
+        <!-- css -->
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="create.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+            rel="stylesheet"
+        />
+        <!-- add link for page specific css -->
+    </head>
+    <body>
+        <header>
+            <section class="header-section"> 
+            <img class="logo" src="../assets/html_css_js.png" alt="logo" />
+            <h1>Create Page</h1>
+        </section>
+           
+            
+            <section class="header-section" id="header-right">
+                <button id="home">Home</button>
+                <h2 id="logged-in-as">Log In To Create A New Post</h3>
+            <button id="auth-button">log in</button>
+            </section>
+        </header>
+
+        <main>
+            <form id="create-post">
+                <h2>Create A New Post</h2>
+                <div class="input-container">
+                    <label for="topic-input">Topic</label>
+                    <input required name="topic" id="topic-input" placeholder="topic" />
+                </div>
+                <div class="input-container">
+                    <label for="message-input">Message</label>
+                    <input name="message" id="message-input" placeholder="message" />
+                </div>
+                <div class="input-container">
+                    <label for="contact-input">Contact</label>
+                    <input name="contact" id="contact-input" placeholder="contact" />
+                </div>
+                <div class="input-container">
+                    <label for="background-select">Background Color</label>
+                    <select name="background" id="background-select">
+                        <option value="">Select a background color</option>
+                    </select>
+                </div>
+                <button type="submit">Create Post</button>
+            </form>
+            <div id="preview-container"></div>
+        </main>
+    </body>
+</html>

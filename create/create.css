@@ -1,0 +1,87 @@
+:root {
+    --background: rgb(224, 234, 247);
+    --header-background: rgb(254, 251, 245);
+    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
+        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    background: var(--background);
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+
+    background-color: var(--header-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+}
+
+#header-right h2 {
+    margin: 15px;
+}
+header .logo {
+    height: 100%;
+}
+button {
+    height: 25px;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#create-post,
+#preview-container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#preview-container {
+    background-image: url(../assets/corkboard.jpg);
+    background-size: cover;
+    height: 334px;
+}
+.post-card {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    padding: 20px;
+    box-shadow: 10px 10px 8px rgb(46, 44, 44);
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.input-container {
+    margin: 30px;
+}
+
+input {
+    width: 350px;
+}
+
+button {
+    width: fit-content;
+}
