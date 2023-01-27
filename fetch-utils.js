@@ -8,3 +8,9 @@ export async function getPosts() {
     let { data, error } = await client.from('bulletin_board_posts').select('*');
     return data;
 }
+
+export async function addPost(topic, message, contact) {
+    const { data, error } = await client
+        .from('bulletin_board_posts')
+        .insert([{ topic: topic, message: message, contact: contact }]);
+}

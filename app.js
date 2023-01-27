@@ -5,6 +5,7 @@ import { renderPost } from './render-utils.js';
 /* Get DOM Elements */
 const postsContainerEl = document.querySelector('.posts-container');
 const authButton = document.querySelector('#auth-button');
+const createButton = document.querySelector('#create-button');
 /* State */
 let postData = [];
 /* Events */
@@ -15,6 +16,9 @@ window.addEventListener('load', async () => {
 });
 authButton.addEventListener('click', () => {
     location.replace('./auth');
+});
+createButton.addEventListener('click', () => {
+    location.replace('./create');
 });
 /* Display Functions */
 function displayPosts() {

@@ -36,6 +36,11 @@ export async function checkAuth() {
         location.replace('../');
     }
 }
+export async function checkAuthFromCreate() {
+    if (!getUser()) {
+        location.replace('../auth');
+    }
+}
 
 export async function redirectIfLoggedIn() {
     if (getUser()) {
