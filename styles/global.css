@@ -52,4 +52,14 @@ main {
     padding: 20px;
     margin: 20px;
     box-shadow: 10px 10px 8px rgb(46, 44, 44);
+    background-color: darksalmon;
+}
+
+a {
+    text-decoration: none;
+}
+
+#create-post-card:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }

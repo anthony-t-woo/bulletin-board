@@ -7,12 +7,15 @@ import { renderPost } from './render-utils.js';
 const postsContainerEl = document.querySelector('.posts-container');
 const authButton = document.querySelector('#auth-button');
 const createButton = document.querySelector('#create-button');
+const createPostEl = document.querySelector('#create-post-card');
+
 /* State */
 let postData = [];
 /* Events */
 window.addEventListener('load', async () => {
     if (getUser()) {
         authButton.textContent = 'log out';
+        createPostEl.textContent = 'Create New Post';
     }
     const response = await getPosts();
     postData = response;
@@ -26,9 +29,7 @@ authButton.addEventListener('click', async () => {
         location.replace('./auth');
     }
 });
-createButton.addEventListener('click', () => {
-    location.replace('./create');
-});
+
 /* Display Functions */
 function displayPosts() {
     for (let post of postData) {
