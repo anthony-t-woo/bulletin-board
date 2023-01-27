@@ -6,8 +6,7 @@ import { renderPost } from './render-utils.js';
 /* Get DOM Elements */
 const postsContainerEl = document.querySelector('.posts-container');
 const authButton = document.querySelector('#auth-button');
-const createButton = document.querySelector('#create-button');
-const createPostEl = document.querySelector('#create-post-card');
+const createPostEl = document.querySelector('#create-post-card-prompt');
 
 /* State */
 let postData = [];
@@ -25,6 +24,7 @@ authButton.addEventListener('click', async () => {
     if (getUser()) {
         await logout();
         authButton.textContent = 'log in';
+        createPostEl.textContent = 'Log In To Create A New Post';
     } else {
         location.replace('./auth');
     }

@@ -7,7 +7,18 @@ const homeButton = document.getElementById('home');
 const previewContainerEl = document.getElementById('preview-container');
 const backgroundSelectEl = document.getElementById('background-select');
 
-let colors = ['yellow', 'greenyellow', 'hotpink', 'lavender', 'skyblue'];
+const colors = [
+    'yellow',
+    'greenyellow',
+    'hotpink',
+    'lavender',
+    'skyblue',
+    'steelblue',
+    'cadetblue',
+    'darkgray',
+    'crimson',
+    'coral',
+];
 
 window.addEventListener('load', async () => {
     await checkAuthFromCreate();

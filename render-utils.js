@@ -3,7 +3,18 @@ export function renderPost(post) {
     const topicEl = document.createElement('h2');
     const messageEl = document.createElement('p');
     const contactEl = document.createElement('p');
-    const colors = ['yellow', 'greenyellow', 'hotpink', 'lavender', 'skyblue'];
+    const colors = [
+        'yellow',
+        'greenyellow',
+        'hotpink',
+        'lavender',
+        'skyblue',
+        'steelblue',
+        'cadetblue',
+        'darkgray',
+        'crimson',
+        'coral',
+    ];
     div.classList.add('post-card');
     if (post.background) {
         div.style.background = post.background;
