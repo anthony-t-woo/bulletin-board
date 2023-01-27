@@ -14,7 +14,7 @@ export async function signUpUser(email, password) {
         password: password,
     });
     if (response.error) {
-        alert('That email is taken. Please try a different one');
+        alert(response.error.message);
     }
     return response.user;
 }
@@ -26,7 +26,7 @@ export async function signInUser(email, password) {
         password: password,
     });
     if (response.error) {
-        alert('incorrect login credentials');
+        alert(response.error.message);
     }
     return response.user;
 }
