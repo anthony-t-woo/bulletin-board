@@ -1,6 +1,6 @@
 export function renderPost(post) {
     const div = document.createElement('div');
-    const topicEl = document.createElement('h2');
+    const topicEl = document.createElement('h3');
     const messageEl = document.createElement('p');
     const contactEl = document.createElement('p');
     const colors = [

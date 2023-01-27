@@ -53,12 +53,18 @@ main {
     margin: 20px;
     box-shadow: 10px 10px 8px rgb(46, 44, 44);
     background-color: darksalmon;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 a {
     text-decoration: none;
 }
-
+#create-post-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: brown;
+}
 #create-post-card:hover {
     cursor: pointer;
     transform: scale(1.1);

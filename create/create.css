@@ -60,6 +60,7 @@ main {
     background-color: yellow;
     padding: 20px;
     box-shadow: 10px 10px 8px rgb(46, 44, 44);
+    font-family: 'Gloria Hallelujah', cursive;
 }
 .input-container {
     margin: 30px;
