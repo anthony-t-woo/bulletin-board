@@ -9,8 +9,8 @@ export async function getPosts() {
     return data;
 }
 
-export async function addPost(topic, message, contact) {
+export async function addPost(topic, message, contact, background) {
     const { data, error } = await client
         .from('bulletin_board_posts')
-        .insert([{ topic: topic, message: message, contact: contact }]);
+        .insert([{ topic: topic, message: message, contact: contact, background: background }]);
 }
