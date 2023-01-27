@@ -11,6 +11,7 @@ let colors = ['yellow', 'greenyellow', 'hotpink', 'lavender', 'skyblue'];
 
 window.addEventListener('load', async () => {
     await checkAuthFromCreate();
+
     for (let color of colors) {
         let colorOptionEl = renderColorOption(color);
         backgroundSelectEl.append(colorOptionEl);
@@ -48,6 +49,9 @@ function displayPreview() {
         contact: formData.get('contact'),
         background: formData.get('background'),
     };
+    if (!formData.get('background')) {
+        previewData.background = 'yellow';
+    }
 
     const previewEl = renderPost(previewData);
     previewContainerEl.textContent = '';
