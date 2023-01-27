@@ -19,3 +19,10 @@ export function renderPost(post) {
 
     return div;
 }
+
+export function renderColorOption(color) {
+    const colorOption = document.createElement('option');
+    colorOption.text = color;
+    colorOption.value = color;
+    return colorOption;
+}
