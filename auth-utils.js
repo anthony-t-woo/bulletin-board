@@ -50,5 +50,5 @@ export async function redirectIfLoggedIn() {
 
 export async function logout() {
     await client.auth.signOut();
-    location.replace('../');
+    // location.replace('../');
 }

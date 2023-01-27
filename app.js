@@ -1,4 +1,5 @@
 /* Imports */
+import { getUser, logout } from './auth-utils.js';
 import { getPosts } from './fetch-utils.js';
 import { renderPost } from './render-utils.js';
 
@@ -10,12 +11,20 @@ const createButton = document.querySelector('#create-button');
 let postData = [];
 /* Events */
 window.addEventListener('load', async () => {
+    if (getUser()) {
+        authButton.textContent = 'log out';
+    }
     const response = await getPosts();
     postData = response;
     displayPosts();
 });
-authButton.addEventListener('click', () => {
-    location.replace('./auth');
+authButton.addEventListener('click', async () => {
+    if (getUser()) {
+        await logout();
+        authButton.textContent = 'log in';
+    } else {
+        location.replace('./auth');
+    }
 });
 createButton.addEventListener('click', () => {
     location.replace('./create');
