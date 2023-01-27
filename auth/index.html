@@ -37,10 +37,8 @@
             <div class="auth-container">
                 <h2>Sign In</h2>
                 <form id="sign-in">
-                    <span>Fields marked with an asterisk (*) are required</span>
-
                     <div class="error">
-                        <label for="sign-in-email">Email * </label>
+                        <label for="sign-in-email">Email</label>
                         <input
                             required
                             autocomplete="email"
@@ -50,7 +48,7 @@
                         />
                     </div>
                     <div>
-                        <label for="sign-in-password">Password *</label>
+                        <label for="sign-in-password">Password</label>
                         <input
                             required
                             autocomplete="current-password"
@@ -64,24 +62,20 @@
                 </form>
             </div>
             <div class="auth-container">
-                <h2>Sign Up</h2>
+                <h2>Register New Account</h2>
                 <form id="sign-up">
                     <div>
-                        <label for="sign-up-email">Email *</label>
+                        <label for="sign-up-email">Email</label>
                         <input required type="email" name="email" id="sign-up-email" />
                     </div>
 
                     <div>
-                        <label for="sign-up-password"> Password * </label>
-                        <span class="form-instructions" id="sign-up-password-instructions">
-                            Password must include: at least 6 characters</span
-                        >
+                        <label for="sign-up-password"> Password</label>
                         <input
                             required
                             autocomplete="new-password"
                             name="password"
                             id="sign-up-password"
-                            aria-describedby="sign-up-password-instructions"
                         />
                     </div>
 

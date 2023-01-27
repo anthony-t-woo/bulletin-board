@@ -22,7 +22,7 @@
 
         <!-- css -->
         <link rel="stylesheet" href="../styles/reset.css" />
-        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="create.css" />
         <!-- add link for page specific css -->
     </head>
     <body>
@@ -34,9 +34,19 @@
 
         <main>
             <form id="create-post">
-                <input name="topic" id="topic-input" placeholder="topic" />
-                <input name="message" id="message-input" placeholder="message" />
-                <input name="contact" id="contact-input" placeholder="contact" />
+                <h2>Create A New Post</h2>
+                <div class="input-container">
+                    <label for="topic-input">Topic</label>
+                    <input name="topic" id="topic-input" placeholder="topic" />
+                </div>
+                <div class="input-container">
+                    <label for="message-input">Message</label>
+                    <input name="message" id="message-input" placeholder="message" />
+                </div>
+                <div class="input-container">
+                    <label for="contact-input">Contact</label>
+                    <input name="contact" id="contact-input" placeholder="contact" />
+                </div>
                 <button type="submit">Create Post</button>
             </form>
         </main>
