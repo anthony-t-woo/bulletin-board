@@ -33,11 +33,12 @@ header .logo {
 main {
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
 }
 
-#create-post {
+#create-post,
+#preview-container {
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -46,6 +47,12 @@ main {
     border: 2px solid black;
     border-radius: 10px;
     padding: 15px;
+}
+
+#preview-container {
+    background-image: url(../assets/corkboard.jpg);
+    background-size: cover;
+    height: 334px;
 }
 .input-container {
     margin: 30px;
@@ -57,4 +64,11 @@ input {
 
 button {
     width: fit-content;
+}
+.post-card {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    padding: 20px;
+    box-shadow: 10px 10px 8px rgb(46, 44, 44);
 }
